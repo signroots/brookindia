@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Brook</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="home">
+<section class="hero-wrap">
+  <div class="hero carousel slide carousel-fade" id="heroCar" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+    <div class="carousel-indicators">
+      <button data-bs-target="#heroCar" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button data-bs-target="#heroCar" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active"><div class="item"><div class="container"><div class="hero-copy">
+        <h1>Pure Water.<br>True Trust.</h1><p class="sub">Delivering Quality Water Solutions Since 2006</p>
+        <p class="tag">Expert Water Purification for Homes, Businesses &amp; Industries</p><a href="contact.html" class="btn btn-white">Enquire Now</a>
+      </div></div></div></div>
+      <div class="carousel-item"><div class="item"><div class="container"><div class="hero-copy">
+        <h1>Pure Water.<br>True Trust.</h1><p class="sub">Delivering Quality Water Solutions Since 2006</p>
+        <p class="tag">Expert Water Purification for Homes, Businesses &amp; Industries</p><a href="contact.html" class="btn btn-white">Enquire Now</a>
+      </div></div></div></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCar" data-bs-slide="prev" aria-label="Previous"><span><i class="bi bi-chevron-left"></i></span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCar" data-bs-slide="next" aria-label="Next"><span><i class="bi bi-chevron-right"></i></span></button>
+  </div>
+  <img class="hero-const" src="images/banner/banner-img-const.png" alt="Brook water purifiers">
+</section>
+
+<section class="section"><div class="container">
+  <h2 class="section-h">Delivering Excellence in Water Purification</h2>
+  <div class="row about-row align-items-center g-5">
+    <div class="col-lg-6"><img src="images/about.webp" alt="Pure water"></div>
+    <div class="col-lg-6"><h3>Brooks: As True as Water</h3>
+      <p>There is nothing as graceful as water, whether it’s soothing bath after a heavy workload or a few drops grazing on our parched lips. But, to pass pristine, pure water over to people without impurities at a time when almost everything is contaminated, one requires effective water management skills and resources. We could witness how a Master Artist guides his source of bounty through the brooks in a forest. An efficient water purifying company should at best be like a brook, a small river in the forest. Hence, the Brook Water Purifiers which was started in 2006, one year and a decade after the mother company visualised it.</p></div>
+  </div>
+</div></section>
+
+
+<!-- Homepage-only Product Carousel -->
+<section class="section products-section" id="homeProducts">
+  <div class="container">
+    <h2 class="section-h">Products</h2>
+    <div class="home-product-carousel">
+      <button
+        type="button"
+        class="home-product-nav prev"
+        id="homeProductPrev"
+        aria-label="Previous products">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="home-product-viewport" id="homeProductViewport">
+        <div class="home-product-track" id="homeProductTrack"></div>
+      </div>
+
+      <button
+        type="button"
+        class="home-product-nav next"
+        id="homeProductNext"
+        aria-label="Next products">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="products.html" class="btn-pill">View All Products</a>
+    </div>
+  </div>
+</section>
+<!-- End Homepage-only Product Carousel -->
+
+<section class="section"><div class="container"><div class="banner"></div></div></section>
+
+<section class="subscribe"><div class="container position-relative">
+
+  <h2>Subscribe for Eco-Friendly Innovations &amp; Industry News</h2>
+</div></section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/products.js"></script>
+<script src="js/home-product-carousel.js"></script>
+<script>document.getElementById("featured").innerHTML = PRODUCTS.filter(p => p.cat === "Industrial RO" || p.slug === "top-vessal-1354").map(p => cardHTML(p, true)).join("");</script>
+</body>
+</html>
