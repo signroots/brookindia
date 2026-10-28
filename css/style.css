@@ -400,3 +400,15 @@ a{text-decoration:none;color:var(--navy)}
     padding-right: .75rem;
   }
 }
+
+
+@media (max-width: 991px) {
+  /* leave room under the Enquire Now button for the dots */
+  .hero .item {
+    padding-bottom: 3.5rem;
+  }
+
+  .hero .carousel-indicators {
+    margin-bottom: 1rem;
+  }
+}
