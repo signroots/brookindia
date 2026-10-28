@@ -110,6 +110,15 @@ a{text-decoration:none;color:var(--navy)}
 @media(max-width:560px){.f-cols{grid-template-columns:1fr}}
 .site-footer h5{color:#fff;font-weight:500;font-size:1.2rem}
 .site-footer .logo{height:110px;margin-bottom:1rem}
+/* Mobile: slightly smaller footer logo with left padding */
+@media(max-width:575px){
+  .site-footer .logo{height:85px;padding-left:12px}
+  /* address and social icons line up with the logo and match its width */
+  .site-footer .logo + p{font-size:.93rem;line-height:1.7;padding-left:12px;margin-bottom:0}
+  .site-footer .logo + p + .social{padding-left:12px}
+  /* Information links (Home, About Us...) line up with the logo too */
+  .site-footer .f-cols > div:nth-child(3){padding-left:12px}
+}
 .site-footer .col-mid{border-left:1px solid #444;padding-left:3rem}
 .cc{font-size:1.5rem;font-weight:500;margin:1.2rem 0 0}
 .cc-num{font-size:1.9rem;font-weight:500}
@@ -352,3 +361,21 @@ a{text-decoration:none;color:var(--navy)}
 .pd-actions .btn-primary:hover{background:var(--teal);border-color:var(--teal)}
 .pd-actions .btn-outline-primary{color:var(--navy);border-color:var(--navy)}
 .pd-actions .btn-outline-primary:hover{background:var(--navy);color:#fff}
+
+/* Mobile: bigger product images, less space around them, centered text */
+@media (max-width: 576px) {
+  /* Product cards (products page and home carousel) */
+  .p-card { padding: .6rem .6rem 1rem; text-align: center; }
+  .p-card .hot { top: .6rem; left: .6rem; }
+  .p-img { height: 340px; margin-bottom: .4rem; }
+  .p-img img { max-height: 340px; width: 100%; }
+
+  /* Home page carousel (2 cards per row) */
+  .home-product-track .p-card { padding: .4rem .4rem .8rem; }
+  .home-product-track .p-img { height: 230px; margin-bottom: .3rem; }
+  .home-product-track .p-img img { padding: 0; }
+
+  /* Single product page: image fills the width */
+  .pd-img { padding: .4rem; min-height: 0; }
+  .pd-img img { max-height: 460px; width: 100%; }
+}
