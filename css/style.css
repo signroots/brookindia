@@ -385,3 +385,10 @@ a{text-decoration:none;color:var(--navy)}
   .pd-price { text-align: center; }
 }
 .search-btn { display: none; }
+
+@media (max-width: 575.98px) {
+  .crumbs {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+}
