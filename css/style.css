@@ -378,4 +378,9 @@ a{text-decoration:none;color:var(--navy)}
   /* Single product page: image fills the width */
   .pd-img { padding: .4rem; min-height: 0; }
   .pd-img img { max-height: 460px; width: 100%; }
+
+  /* Single product page: category, title and price centered */
+  .pd-cat { display: block; text-align: center; }
+  .pd-name { text-align: center; }
+  .pd-price { text-align: center; }
 }
