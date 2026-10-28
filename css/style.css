@@ -392,3 +392,11 @@ a{text-decoration:none;color:var(--navy)}
     padding-right: .75rem;
   }
 }
+
+
+@media (max-width: 575.98px) {
+  .copy {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+}
