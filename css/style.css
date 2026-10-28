@@ -384,3 +384,4 @@ a{text-decoration:none;color:var(--navy)}
   .pd-name { text-align: center; }
   .pd-price { text-align: center; }
 }
+.search-btn { display: none; }
