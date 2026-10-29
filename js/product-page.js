@@ -37,6 +37,9 @@
   crumbCat.href = 'products.html?cat=' + encodeURIComponent(p.cat);
   $('#crumbName').textContent = p.name;
 
+  // Trimmed (less white space) image is used on mobile only; desktop uses the normal image
+  const detailImg = 'images/products/detail/' + p.image.split('/').pop();
+
   const waText = encodeURIComponent('Hi, I am interested in ' + p.name + ' (' + p.cat + '). Please share more details.');
   const desc = p.desc
     ? '<p>' + esc(p.desc) + '</p>'
@@ -49,8 +52,10 @@
     <div class="row g-5 align-items-start">
       <div class="col-md-6">
         <div class="pd-img">
-          <img src="${esc(p.image)}" alt="${esc(p.name)}"
-               onerror="${fallback}">
+          <picture>
+            <source media="(max-width: 576px)" srcset="${esc(detailImg)}">
+            <img src="${esc(p.image)}" alt="${esc(p.name)}" onerror="${fallback}">
+          </picture>
         </div>
       </div>
       <div class="col-md-6">
