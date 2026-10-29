@@ -418,3 +418,19 @@ a{text-decoration:none;color:var(--navy)}
     max-height: 480px;
   }
 }
+
+/* Products page on mobile: products first, categories after */
+@media (max-width: 991.98px) {
+  .side { order: 2; }
+  .side + .col-lg-9 { order: 1; }
+}
+
+/* Phones: one product image per row, one below the other */
+@media (max-width: 575.98px) {
+  .p-grid,
+  .p-grid.cols-2,
+  .p-grid.cols-3,
+  .p-grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
