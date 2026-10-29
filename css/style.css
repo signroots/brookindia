@@ -447,3 +447,6 @@ a{text-decoration:none;color:var(--navy)}
   #grid .p-img { height: 230px; }
   #grid .p-img img { max-height: 230px; }
 }
+
+
+.toolbar > div:has(#show) { display: none; }
