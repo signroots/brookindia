@@ -406,3 +406,15 @@ a{text-decoration:none;color:var(--navy)}
   .pd-img { padding: .2rem; }
   .pd-img img { max-height: 480px; }
 }
+
+@media (max-width: 575.98px) {
+  .doc-grid {
+    grid-template-columns: 1fr;   /* one image per row */
+    gap: 16px;
+  }
+
+  .doc-grid img {
+    height: auto;                 /* show the full image */
+    max-height: 480px;
+  }
+}
