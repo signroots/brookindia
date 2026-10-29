@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brookindia.com/sitemap.xml

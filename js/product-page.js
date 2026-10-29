@@ -28,9 +28,6 @@
     return;
   }
 
-  document.title = p.name + ' | Brook India';
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.content = p.name + ' - ' + p.cat + ' by Brook India.';
 
   const crumbCat = $('#crumbCat');
   crumbCat.textContent = p.cat;
