@@ -419,18 +419,31 @@ a{text-decoration:none;color:var(--navy)}
   }
 }
 
-/* Products page on mobile: products first, categories after */
-@media (max-width: 991.98px) {
-  .side { order: 2; }
-  .side + .col-lg-9 { order: 1; }
-}
-
-/* Phones: one product image per row, one below the other */
+/* Products page on mobile: categories on the left, products on the right, one per row */
 @media (max-width: 575.98px) {
+  /* keep the two columns side by side and shrink the gap between them */
+  .row.g-5:has(> .side) {
+    --bs-gutter-x: .75rem;
+    --bs-gutter-y: 0;
+    flex-wrap: nowrap;
+  }
+  .row.g-5 > .side { width: 34%; }
+  .row.g-5 > .side + .col-lg-9 { width: 66%; }
+
+  /* smaller category text so it fits the narrow left column */
+  .side h4 { font-size: 1.05rem; margin-bottom: .8rem; }
+  .side a { font-size: .95rem; padding: .45rem 0; }
+
+  /* toolbar: hide the column buttons (not needed here) and tighten it */
+  .toolbar .views { display: none; }
+  .toolbar { font-size: .85rem; }
+  .toolbar > * { padding: .6rem .8rem; }
+
+  /* products: one per row, sized for the narrower right column */
   .p-grid,
   .p-grid.cols-2,
   .p-grid.cols-3,
-  .p-grid.cols-4 {
-    grid-template-columns: 1fr;
-  }
+  .p-grid.cols-4 { grid-template-columns: 1fr; }
+  #grid .p-img { height: 230px; }
+  #grid .p-img img { max-height: 230px; }
 }
